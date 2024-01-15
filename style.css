@@ -1,0 +1,78 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url(bg.jpg);
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+}
+
+.rain {
+    width: 100%;
+    height: 100vh;
+    background-image: url(rain.png);
+    animation: rains .3s linear infinite;
+    position: relative;
+}
+
+.rain::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    animation: lighting 3s linear infinite;
+    opacity: 0;
+}
+
+@keyframes rains {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 20% 100%;
+    }
+}
+
+@keyframes lighting {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    11% {
+        opacity: 1;
+    }
+
+    14% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    21% {
+        opacity: 1;
+    }
+
+
+    24% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
